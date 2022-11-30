@@ -1,7 +1,5 @@
 import * as React from "react";
-import {
-  createBrowserRouter
-  } from "react-router-dom";
+import { createBrowserRouter} from "react-router-dom";
 import App from "./App";
 
 const Page = (props: {title:string}) => <h1>{props.title}</h1>
@@ -92,14 +90,5 @@ export const router = createBrowserRouter([
     path: "/accessibility",
     element: <Page title="Google Accessibility" />
     }
-
-
-
-
-
-
-
-
-
 
 ])

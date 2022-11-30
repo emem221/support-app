@@ -4,14 +4,30 @@ import {RouterProvider} from 'react-router-dom';
 import { router } from './router';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { colors } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: colors.blue[500]
+    },
+  },
+
+})
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+    <React.StrictMode>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </React.StrictMode>
+    
+    
+ 
 );
 
  
